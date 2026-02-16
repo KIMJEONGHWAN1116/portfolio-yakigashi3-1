@@ -4,7 +4,7 @@ import "./Products.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import kvgiftBox from "../../../assets/images/kvgiftBox.png";
+import kvgiftBox from "../../../assets/images/kvgiftbox.png";
 import product2 from "../../../assets/images/product2.svg";
 import product3 from "../../../assets/images/product3.svg";
 import product4 from "../../../assets/images/product4.svg";
