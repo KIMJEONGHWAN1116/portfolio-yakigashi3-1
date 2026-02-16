@@ -1,7 +1,7 @@
 import './Shoptop.css';
 import SHOPKV from './sections/SHOPKV.jsx';
 import ProductList from './sections/ProductList.jsx';
-import Kodawari from './sections/kodawari.jsx';
+import Kodawari from './sections/Kodawari.jsx';
 import Reviews from './sections/Reviews.jsx';
 import News from './sections/News.jsx';
 import BackToTop from './BackToTop.jsx';
