@@ -1,0 +1,174 @@
+.time-section {
+    height: 300vh;
+    background: linear-gradient(180deg,
+            #fffdf0 0%,
+            #fff8dc 55%,
+            #fff3c4 100%);
+}
+
+.sticky-wrap {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    gap: clamp(16px, 3vw, 40px);
+    padding: clamp(20px, 5vw, 80px);
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.clock {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: clamp(0px, 6vw, 100px);
+}
+
+.clock-face {
+    width: clamp(220px, 34vw, 420px);
+    height: clamp(220px, 34vw, 420px);
+    border-radius: 50%;
+    border: 3px solid #e6e0b5;
+    position: relative;
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(2px);
+}
+
+.hour-hand,
+.minute-hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    background: #5c5c5c;
+    border-radius: 999px;
+}
+
+.hour-hand {
+    width: clamp(4px, 0.6vw, 6px);
+    height: clamp(60px, 9vw, 90px);
+}
+
+.minute-hand {
+    width: clamp(5px, 0.9vw, 8px);
+    height: clamp(95px, 14vw, 150px);
+}
+
+.clock-label {
+    margin-top: 16px;
+    font-size: clamp(16px, 2.2vw, 24px);
+    letter-spacing: 0.1em;
+}
+
+.card-area {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.time-card {
+    width: min(520px, 100%);
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    animation: fadeUp 0.6s ease;
+}
+
+.time-card img {
+    width: 100%;
+    height: clamp(180px, 26vw, 240px);
+    object-fit: cover;
+    object-position: center 30%;
+}
+
+.card-text {
+    padding: clamp(16px, 3vw, 24px);
+}
+
+.card-text h3 {
+    font-size: clamp(18px, 2.4vw, 22px);
+    margin-bottom: 4px;
+}
+
+.card-text span {
+    font-size: clamp(12px, 1.6vw, 13px);
+    color: #999;
+}
+
+.card-text p {
+    margin-top: 12px;
+    line-height: 1.7;
+    font-size: clamp(14px, 1.8vw, 16px);
+}
+
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1024px) {
+    .clock {
+        width: 45%;
+        margin-left: 0;
+    }
+
+    .card-area {
+        width: 55%;
+    }
+}
+
+@media (max-width: 768px) {
+    .sticky-wrap {
+        flex-direction: column;
+        justify-content: center;
+        padding: 28px 16px;
+        gap: 18px;
+    }
+
+    .clock,
+    .card-area {
+        width: 100%;
+    }
+
+    .clock-face {
+        width: min(320px, 84vw);
+        height: min(320px, 84vw);
+    }
+
+    .time-card {
+        width: min(520px, 92vw);
+    }
+
+    .time-card img {
+        width: 100%;
+        height: clamp(180px, 26vw, 240px);
+        object-fit: cover;
+        object-position: center 30%;
+    }
+}
+
+@media (max-width: 420px) {
+    .clock-label {
+        font-size: 18px;
+    }
+
+    .time-card img {
+        height: 180px;
+    }
+
+    .card-text p {
+        font-size: 14px;
+    }
+}

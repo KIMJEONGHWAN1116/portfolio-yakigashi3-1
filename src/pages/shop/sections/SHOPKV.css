@@ -1,0 +1,85 @@
+.shopkvwrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg,
+            #FFF7CC,
+            #FFFDE8);
+    padding-bottom: 100px;
+}
+
+.KVimg {
+    display: flex;
+    gap: 50px;
+}
+
+
+.kvsub {
+    position: relative;
+}
+
+.kvsub p {
+    position: absolute;
+    left: -200px;
+    bottom: -150px;
+    width: 380px;
+    height: 150px;
+    background-image: url('../../../assets/images/Ellipse.svg');
+    background-position-x: 40px;
+    background-position-y: 10px;
+    background-size: 380px;
+    background-repeat: no-repeat;
+    padding: 70px;
+}
+
+@media (max-width: 768px) {
+    .shopkvwrap {
+        padding: 0;
+    }
+
+    /* 세로 정렬 */
+    .KVimg {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* 첫 번째 이미지 제거 */
+    .kvsub img {
+        display: none;
+    }
+
+    /* 두 번째 이미지 → 위 */
+    .KVimg>img {
+        order: 1;
+        /* ⭐ 위 */
+        max-width: 300px;
+        transform: translateY(60px);
+        width: 100%;
+        height: auto;
+    }
+
+    /* 텍스트 → 아래 */
+    .kvsub {
+        order: 2;
+        /* ⭐ 아래 */
+    }
+
+    .kvsub p {
+        position: relative;
+        left: 0;
+        bottom: 0;
+        margin-top: 16px;
+        width: 90%;
+        max-width: 320px;
+        height: auto;
+        transform: translateY(-50px) translatex(-60px);
+        padding: 40px 14px 32px;
+        text-align: center;
+        line-height: 1.8;
+        font-size: 14px;
+
+        background-size: contain;
+        background-position: center top;
+    }
+}

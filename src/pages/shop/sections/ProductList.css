@@ -1,0 +1,136 @@
+.productlist {
+    max-width: 1000px;
+    width: 100%;
+    margin: 100px auto;
+}
+
+.productlist h2 {
+    font-size: clamp(16px, 4vw, 40px);
+    line-height: 1.1;
+}
+
+.productlist h2 span {
+    font-size: clamp(16px, 4vw, 32px);
+}
+
+.giftgrid {
+    width: 100%;
+    margin-bottom: 80px;
+    display: grid;
+    grid-template-columns: 409px 1fr;
+    grid-template-areas: 'giftgridimg giftboxh3'
+        'giftgridimg giftboxp'
+        'giftgridimg giftboxspan';
+}
+
+.gift-grid {
+    text-decoration: none;
+    color: #333;
+}
+
+.giftgridimg {
+    grid-area: giftgridimg;
+}
+
+.giftboxh3 {
+    grid-area: giftboxh3;
+    justify-self: start;
+    margin-top: 0;
+    font-size: clamp(16px, 4vw, 32px);
+    font-weight: 400;
+    margin-left: 40px;
+    text-align: left;
+}
+
+.giftboxp {
+    grid-area: giftboxp;
+    font-size: clamp(16px, 4vw, 16px);
+    line-height: 1.8;
+    margin-top: -20px;
+    margin-left: 40px;
+    text-align: left;
+}
+
+.giftboxspan {
+    font-size: clamp(16px, 4vw, 24px);
+    grid-area: giftboxspan;
+    margin-top: -20px;
+    margin-left: 40px;
+    text-align: left;
+}
+
+.productlist16 {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+@media (max-width: 768px) {
+    .productlist16 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .productlist16 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================
+   Gift Box Responsive
+========================= */
+
+@media (max-width: 768px) {
+    .giftgrid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "giftgridimg"
+            "giftboxh3"
+            "giftboxp"
+            "giftboxspan";
+        row-gap: 20px;
+        text-align: center;
+    }
+
+    .giftgridimg {
+        justify-self: center;
+        max-width: 300px;
+        width: 100%;
+    }
+
+    .giftboxh3,
+    .giftboxp,
+    .giftboxspan {
+        margin-left: 0;
+        text-align: left;
+        max-width: 400px;
+    }
+
+    .giftboxp {
+        margin-top: 0;
+    }
+
+    .giftboxspan {
+        margin-top: 10px;
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .giftgridimg {
+        max-width: 240px;
+    }
+
+    .productlist {
+        margin: 60px auto;
+        padding: 0 16px;
+    }
+
+    .productlist16 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        max-width: 400px;
+    }
+}

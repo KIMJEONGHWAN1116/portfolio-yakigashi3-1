@@ -1,0 +1,52 @@
+.product-link{
+    text-decoration: none;
+    color: #333;
+}
+
+.product-link h3,
+.product-link p {
+    text-align: center;
+}
+
+.product-card .price {
+    font-size: clamp(16px, 4vw, 20px);
+}
+
+.product-card img {
+  width: 100%;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
+.proimgcon {
+    position: relative;
+}
+
+.proimgcon .proimg2 {
+    max-width: 90px;
+    width: 100%;
+    position: absolute;
+    right: -20px;
+    top: -40px;
+}
+
+@media (max-width: 480px) {
+    .product-card h3 {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .product-card p {
+        font-size: 12px;
+        line-height: 1.6;
+        text-align: left;
+    }
+
+    .product-card span {
+        font-weight: 500;
+    }
+}

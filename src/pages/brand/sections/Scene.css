@@ -1,0 +1,142 @@
+.scenewrap {
+    background-color: #FFFAAE;
+    background-image: url("../../../assets/images/scenevector.svg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position-y: 120px;
+
+
+    height: 800px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+.scene {
+    max-width: 435px;
+    width: 100%;
+    margin: 0 auto;
+    transform: translateX(235px);
+    padding-bottom: 20px;
+}
+
+.scene h2 {
+    font-size: clamp(16px, 4vw, 32px);
+    text-align: left;
+    line-height: 1.25;
+    margin-bottom: 14px;
+}
+
+.scene h2 span {
+    font-size: 20px;
+    margin-left: 8px;
+    opacity: 0.85;
+}
+
+.scene p {
+    line-height: 2.0;
+    margin: 0 0 14px 0;
+}
+
+
+@media (max-width: 1440px) {
+    .scenewrap {
+        background-position: 58% 12%;
+        height: 550px;
+    }
+
+    .scene {
+        transform: translateX(200px);
+    }
+}
+
+@media (max-width: 1200px) {
+    .scenewrap {
+        background-position: 58% 20%;
+        height: 500px;
+    }
+
+    .scene {
+        transform: translateX(200px);
+    }
+}
+
+@media (max-width: 1120px) {
+    .scenewrap {
+        /* ✅ 고정 height는 너무 빡세서 유동으로 */
+        height: auto;
+        min-height: clamp(520px, 85vh, 700px);
+
+        padding: 28px 16px;
+
+        /* ✅ 한 장 이미지는 찌그러짐 방지 위해 cover로 전환 */
+        background-size: cover;
+        background-position: 68% 25%;
+
+        align-items: stretch;
+    }
+
+    .scene {
+        transform: translateX(150px);
+        max-width: 460px;
+    }
+}
+
+@media (max-width: 900px) {
+    .scenewrap {
+        height: auto;
+        min-height: clamp(520px, 85vh, 700px);
+        padding: 28px 16px;
+        background-size: cover;
+        background-position: 68% 25%;
+        align-items: stretch;
+    }
+
+    .scene {
+        transform: none;
+        margin-left: auto;
+        margin-right: 8px;
+        width: min(520px, 92vw);
+        max-width: 520px;
+        padding-bottom: 0;
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+    .scenewrap {
+        height: auto;
+        min-height: clamp(520px, 85vh, 700px);
+        padding: 28px 16px;
+        background-size: cover;
+        background-position: 68% 25%;
+        align-items: stretch;
+    }
+
+    .scene {
+        transform: none;
+        margin-left: auto;
+        margin-right: 8px;
+        width: min(520px, 92vw);
+        max-width: 520px;
+        padding-bottom: 0;
+        text-align: left;
+    }
+
+    .scene h2 {
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .scenewrap {
+        background-position: 88% 20%;
+    }
+
+    .scene {
+        margin-right: 6px;
+    }
+}

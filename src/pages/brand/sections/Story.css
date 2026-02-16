@@ -1,0 +1,428 @@
+
+.stage {
+    position: relative;
+    height: 300vh;
+  }
+  
+  .pin {
+    position: relative;
+    height: 100vh;
+  }
+  
+  .back,
+  .front {
+    position: absolute;
+    inset: 0;
+  }
+  
+  .front {
+    z-index: 2;
+    will-change: transform;
+  }
+  
+  .sikaku {
+    width: 100%;
+    height: 200px;
+    background-color: #f6ed74;
+  }
+  
+  .setouchilemoncake {
+    width: 100%;
+    max-width: 800px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  .storywrap {
+    width: 100%;
+    background-color: #f6ed74;
+    padding-bottom: 50px;
+    overflow: hidden;
+  }
+  
+  .story {
+    margin: 0 auto;
+    padding: 30px;
+    max-width: 800px;
+    width: 100%;
+    height: 800px;
+    background-color: #fefdf1;
+    border-radius: 66% 66% 70% 70%;
+    position: relative;
+  }
+  
+  .story h2 {
+    text-align: center;
+    font-size: clamp(18px, 3.2vw, 32px);
+  }
+  
+  .story h2 span {
+    font-size: 20px;
+    margin-left: 8px;
+  }
+  
+  .story p {
+    text-align: center;
+    line-height: 2.2;
+    font-size: clamp(14px, 1.6vw, 16px);
+  }
+  
+  .storyimggrid {
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-areas: "nutcake tennpo giftbox3";
+    grid-template-columns: 1fr 1fr 1fr;
+    width: min(900px, 110%);
+    pointer-events: none;
+  }
+  
+  .nutcake {
+    width: 100%;
+    transform: translateX(-40%) translateY(-60%);
+    grid-area: nutcake;
+    z-index: 10;
+  }
+  
+  .giftbox3 {
+    width: 100%;
+    grid-area: giftbox3;
+    transform: translateX(-50%) translateY(40%);
+  }
+  
+  .tennpo {
+    transform: translateX(-130%) translateY(30%);
+    max-width: 400px;
+    width: 100%;
+    grid-area: tennpo;
+  }
+  
+  .circlewrap {
+    display: flex;
+  }
+  
+  .circle {
+    width: 10%;
+    aspect-ratio: 1;
+    background-color: #f6ed74;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+  }
+  
+  .back {
+    z-index: 1;
+    background-color: #ddefcb;
+    width: 100%;
+    height: 1200px;
+  
+    padding-top: 500px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+  
+  .back h2 {
+    font-size: clamp(18px, 3.2vw, 32px);
+    color: #5a4a36;
+  }
+  
+  .back h2 span {
+    font-size: 20px;
+    color: #5a4a36;
+    margin-left: 8px;
+  }
+  
+  .back p {
+    color: #5a4a36;
+    line-height: 1.6;
+    font-size: clamp(14px, 1.6vw, 16px);
+  }
+  
+  .kodawari {
+    margin-right: 400px;
+  }
+  
+  .sozaicardwarp {
+    transform: translateY(-80px);
+  }
+  
+  .sozaicard {
+    width: 400px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 37% 55% 37% 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    outline: 3px dashed #b7d7a4;
+    outline-offset: -10px;
+    position: relative;
+  }
+  
+  .sozaicardtext {
+    padding-left: 30px;
+    padding-bottom: 40px;
+  }
+  
+  .sozaicardtext h3 {
+    line-height: 1.8;
+    width: 320px;
+    color: #2f5a32;
+    font-size: 18px;
+  }
+  
+  .sozaicardtext h3 span {
+    font-size: 24px;
+    color: #2f5a32;
+  }
+  
+  .lemonimg,
+  .eggs {
+    position: absolute;
+    right: -64px;
+    width: 180px;
+    height: auto;
+  }
+  
+  .lemonimg {
+    bottom: -32px;
+  }
+  
+  .eggs {
+    bottom: -72px;
+  }
+  
+  .reverse {
+    transform: scaleX(-1) translateY(-200px);
+    margin-right: 400px;
+  }
+  
+  .reverse .sozaicardtext {
+    transform: scaleX(-1);
+  }
+  
+  .noreverse {
+    margin-left: 400px;
+  }
+  
+  .noreverse:last-child {
+    transform: translateY(-350px);
+  }
+  
+  .komugi {
+    width: 200px;
+    position: absolute;
+    right: -14px;
+    bottom: -10px;
+  }
+  
+  /* 태블릿 */
+  @media (max-width: 800px) {
+    .kodawari {
+      margin-right: 0;
+      text-align: center;
+      padding: 0 16px;
+    }
+  
+    .noreverse {
+      margin-left: 0;
+    }
+  
+    .reverse {
+      margin-right: 0;
+    }
+  }
+  
+  @media (max-width: 800px) {
+    .stage {
+      height: auto;
+    }
+  
+    .pin {
+      height: auto;
+    }
+  
+    .back,
+    .front {
+      position: relative;
+      inset: auto;
+      height: auto;
+      width: 100%;
+    }
+  
+    .front {
+      transform: none !important;
+      will-change: auto;
+      z-index: 2;
+    }
+  
+    .back {
+      z-index: 1;
+      height: auto;
+      padding: 72px 1px 40px;
+      align-items: stretch;
+      gap: 18px;
+    }
+  
+    .sikaku {
+      height: 120px;
+    }
+  
+    .setouchilemoncake {
+      position: relative;
+      max-width: min(520px, 92vw);
+      width: 92vw;
+      margin: 0 auto;
+      display: block;
+      right: auto;
+      top: auto;
+    }
+  
+    .storywrap {
+      padding: 24px 0 40px;
+    }
+  
+    .story {
+      height: auto;
+      width: min(720px, 92vw);
+      padding: 22px 16px 18px;
+      border-radius: 38px;
+    }
+  
+    .story p {
+      line-height: 1.9;
+    }
+  
+    .storyimggrid {
+      position: relative;
+      left: auto;
+      bottom: auto;
+      transform: none;
+      width: 100%;
+      margin-top: 18px;
+  
+      display: grid;
+      grid-template-areas:
+        "nutcake giftbox3"
+        "tennpo tennpo";
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      pointer-events: auto;
+    }
+  
+    .nutcake,
+    .giftbox3,
+    .tennpo {
+      transform: none;
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+    }
+  
+    .kodawari {
+      margin: 0 auto;
+      max-width: 720px;
+      text-align: center;
+    }
+  
+    .sozaicardwarp {
+      transform: none;
+      display: grid;
+      gap: 18px;
+      justify-items: center;
+      margin-top: 10px;
+    }
+  
+    .sozaicard {
+      width: min(520px, 92vw);
+      height: auto;
+      padding: 18px 16px 72px;
+    }
+  
+    .sozaicardtext {
+      padding: 0;
+    }
+  
+    .sozaicardtext h3 {
+      width: auto;
+      font-size: clamp(16px, 4.6vw, 20px);
+    }
+  
+    .sozaicardtext h3 span {
+      font-size: clamp(18px, 5.6vw, 24px);
+    }
+  
+    .sozaicardtext p {
+      font-size: 14px;
+      line-height: 1.8;
+    }
+  
+    .reverse {
+      transform: none;
+      margin: 0;
+    }
+  
+    .reverse .sozaicardtext {
+      transform: none;
+    }
+  
+    .noreverse {
+      margin: 0;
+    }
+  
+    .noreverse:last-child {
+      transform: none;
+    }
+  
+    .lemonimg,
+    .eggs,
+    .komugi {
+      position: absolute;
+      right: 12px;
+      bottom: 10px;
+      width: clamp(110px, 28vw, 160px);
+      height: auto;
+    }
+  
+    .sikaku {
+      display: none;
+    }
+  
+    .setouchilemoncake {
+      display: none;
+    }
+  
+    .nutcake {
+      display: none;
+    }
+  
+    .giftbox3 {
+      display: none;
+    }
+  
+    .circle {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 420px) {
+    .back {
+      padding-top: 64px;
+    }
+  
+    .story h2 span,
+    .back h2 span {
+      font-size: 16px;
+    }
+  
+    .circle {
+      width: 12%;
+    }
+  }

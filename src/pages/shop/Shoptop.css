@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Klee+One&family=Yomogi&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+.Shoptop {
+    font-family: 'Yomogi';
+}
+
+h2 {
+    font-weight: lighter;
+}

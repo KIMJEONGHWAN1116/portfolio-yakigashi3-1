@@ -1,0 +1,55 @@
+.gift-fixed-text ul li {
+    list-style: none;
+
+}
+
+.GiftDetailgrid {
+    width: 100%;
+    margin-bottom: 80px;
+    display: grid;
+    grid-template-columns: 409px 1fr;
+    grid-template-areas: 'giftgridimg giftboxh3'
+        'giftgridimg giftboxp'
+        'giftgridimg giftboxspan';
+}
+
+.gift-grid {
+    text-decoration: none;
+    color: #333;
+}
+
+.GiftDetailgridimg {
+    grid-area: giftgridimg;
+}
+
+.GiftDetailboxh3 {
+    grid-area: giftboxh3;
+    justify-self: start;
+    margin-top: 0;
+    font-size: clamp(16px, 4vw, 32px);
+    font-weight: 400;
+    margin-left: 40px;
+    text-align: left;
+}
+
+.GiftDetailgrid .GiftDetailboxp {
+    grid-area: giftboxp;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-top: -20px;
+    margin-left: 40px;
+    text-align: left;
+}
+
+.GiftDetailboxspan {
+    font-size: clamp(16px, 4vw, 24px);
+    grid-area: giftboxspan;
+    margin-top: -20px;
+    margin-left: 40px;
+    text-align: left;
+}
+
+.gift-fixed-text {
+    width: 1000px;
+    margin: 0 auto;
+}

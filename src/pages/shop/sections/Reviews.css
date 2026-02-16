@@ -1,0 +1,134 @@
+.customer {
+    max-width: 1000px;
+    width: 100%;
+    margin: 100px auto;
+}
+
+.customer h2 {
+    font-size: clamp(16px, 4vw, 40px);
+    line-height: 1.1;
+}
+
+.customer h2 span {
+    font-size: clamp(16px, 4vw, 32px);
+}
+
+.reviewcontainer {
+    background: linear-gradient(135deg,
+            #FFF7CC,
+            #FFFDE8);
+    max-width: 1000px;
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
+    border-radius: 30px;
+    margin-bottom: 150px;
+}
+
+.reviewcontainerflex {
+    display: flex;
+}
+
+.reviewcontainerflex {
+    display: flex;
+    justify-content: space-around;
+}
+
+.reviewtext {
+    background-color: #fff;
+    padding: 75px 60px;
+    border-radius: 30px;
+    align-self: center;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.sannkaku {
+    align-self: center;
+}
+
+.map h2 {
+    font-size: clamp(16px, 4vw, 40px);
+    line-height: 1.1;
+}
+
+.map h2 span {
+    display: inline-block;
+    font-size: clamp(16px, 4vw, 28px);
+    transform: translateY(-10px);
+}
+
+.map p {
+    margin-top: -20px;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+
+    .customer {
+        padding: 0 16px;
+        margin: 80px auto;
+    }
+
+    .reviewcontainer {
+        padding: 40px 20px;
+        margin-bottom: 100px;
+    }
+
+    .reviewcontainerflex {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    /* 좌우 화살표 숨기기 */
+    .sannkaku {
+        display: none;
+    }
+
+    /* 리뷰 이미지 */
+    .reviewcontainerflex img {
+        max-width: 240px;
+        width: 100%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    /* 리뷰 텍스트 */
+    .reviewtext {
+        padding: 32px 24px;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+}
+
+/* 📱 모바일 */
+@media (max-width: 480px) {
+
+    .reviewcontainer {
+        max-width: 360px;
+        width: 100%;
+        border-radius: 20px;
+        padding: 32px 16px;
+    }
+
+    .reviewtext {
+        padding: 24px 20px;
+    }
+
+    .map iframe {
+        height: 300px;
+        width: 90%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .map p {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-top: 20px;
+    }
+    .map h2 span {
+        transform: translatey(0);
+        font-size: 14px;
+    }
+}
