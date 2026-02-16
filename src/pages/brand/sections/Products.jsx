@@ -182,7 +182,7 @@ export default function Products() {
   }, []);
 
   return (
-    <section className="products" ref={sectionRef}>
+    <section className="products" ref={sectionRef} id="products">
       <div className="products-inner">
         <h2 className="products-title">商品紹介</h2>
 
