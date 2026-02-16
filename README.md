@@ -1,18 +1,42 @@
-# React + Vite
+# 焼菓子専門店「焼菓子 3&1」オンラインショップ制作
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+「主婦がひと息つけるお菓子」という思いが込められている焼菓子専門店「焼菓子 3&1」のオンラインショップです。
+このサイトはオンライン上でも「ひと息つける時間」を感じられるようにし、購入につなげることを目的としています。
+主婦が焼き菓子を食べるシーンやこだわり素材、お店のストーリーを通じて共感を生み、自然にオンラインショップに
+つながるように設計しました。
 
-Currently, two official plugins are available:
+- **ターゲット**：がんばる主婦にやさしい時間をプレゼントしたいと思っている人
+- **デザイン方針**：ブランドページでは「やさしさ」や「温もり」を感じてもらうことを重視し、
+オンラインショップでは購入に迷わず進められるシンプルさを重視してデザインを分け
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 工夫点
+- **レスポンシブ対応**（PC / タブレット / スマホ）
+- **グローバルナビゲーション**
+  - PC：画像付きメニュー
+  - Mobile：ハンバーガーメニュー（画像アイコン付き）
+  - スクロール時：サイドナビ表示 + Topボタン
+- **スクロール連動の演出**
+  - 時間帯に合わせたカード切り替え（Clock / Card）
+  - セクションの視認性を高めるアニメーション・トランジション
+- **商品紹介セクション**
+  - スクロールでカードがスライドして切り替わるUI
+  - 視線誘導（優先順位の整理、情報の読みやすさを意識）
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+---
 
-Note: This will impact Vite dev & build performances.
+## 使用技術
+- React
+- Vite
+- JavaScript
+- CSS
+- GSAP / ScrollTrigger
+- Figma / Illustrator（素材制作・デザイン）
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## セットアップ（ローカル起動）
+```bash
+npm install
+npm run dev
