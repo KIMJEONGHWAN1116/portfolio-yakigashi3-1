@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import "./KV.css";
 
-import kvgiftBox from "../../../assets/images/kvgiftBox.png";
+import kvgiftBox from "../../../assets/images/kvgiftbox.png";
 import kv1 from "../../../assets/images/kv1.png";
 import kv6 from "../../../assets/images/kv6.png";
 import kv3 from "../../../assets/images/kv3.png";
