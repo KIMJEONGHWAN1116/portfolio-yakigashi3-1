@@ -7,7 +7,7 @@ export default function FooterBrand() {
 
                 <div className="footer-logo">
                     <a href="/">
-                        <img src="/logo.png" alt="焼き菓子３＆１" />
+                        <img src="/logo.png" alt="焼菓子３＆１" />
                     </a>
                     <p>
                         忙しい日々の中でも、<br />

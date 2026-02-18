@@ -10,7 +10,7 @@ export default function FooterShop() {
 
         <div className="footer-logo">
           <Link to="/shop">
-            <img src='/public/logo.png' alt="焼き菓子 3&1 ロゴ" />
+            <img src='/logo.png' alt="焼菓子 3&1 ロゴ" />
           </Link>
         </div>
 
